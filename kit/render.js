@@ -33,7 +33,7 @@ function build(spec) {
   const total = 3 + spec.slides.length;
   const S = [];
   S.push(`<section class="slide" id="s1">${corners}<div class="stack"><h1>${esc(spec.cover_title || 'Карта дня')}</h1><p class="sub" style="margin:26px 0 44px">${esc(spec.cover_sub || 'Остановись на секунду. Эта карта вытянута для тебя.')}</p>${card('back', 330)}<p class="cta" style="margin-top:40px">Листай, чтобы открыть</p></div>${dots(1, total)}</section>`);
-  const nm = c.name.length > 9 ? ' style="font-size:96px"' : '';
+  const L = c.name.length, nm = L > 13 ? ' style="font-size:64px"' : L > 9 ? ' style="font-size:82px"' : L > 6 ? ' style="font-size:108px"' : '';
   S.push(`<section class="slide" id="s2">${corners}<div class="split" style="gap:56px;padding:0 110px">${card('face', 370)}<div class="col"><p class="cardname"${nm}>${esc(c.name)}</p><p class="arc">Старший аркан ${c.n}</p><p class="sub" style="font-size:32px">${esc(spec.reveal)}</p></div></div>${dots(2, total)}</section>`);
   spec.slides.forEach((sl, i) => S.push(`<section class="slide" id="s${i + 3}">${corners}<div class="split">${card('face', 300)}<div class="col"><h2>${esc(sl.title)}</h2><div class="body">${paras(sl.paras)}</div></div></div>${dots(i + 3, total)}</section>`));
   S.push(`<section class="slide" id="s${total}">${corners}<div class="stack"><svg viewBox="-50 -50 100 100" style="width:96px;margin-bottom:46px"><use href="#star8" x="-50" y="-50" width="100" height="100" fill="url(#goldg)"/></svg><div class="quote">${esc(spec.final_top)}<span>${esc(spec.final_gold)}</span></div></div>${dots(total, total)}</section>`);
@@ -53,8 +53,10 @@ function build(spec) {
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: { width: 1080, height: 1080 } });
   await p.goto('file://' + tmp); await p.evaluate(() => document.fonts.ready); await p.waitForTimeout(400);
+  // автоподгонка: длинные имена карт и заголовки уменьшаются, пока не влезут в колонку
+  await p.evaluate(() => document.querySelectorAll('.cardname,h2').forEach(e => { const col = e.parentElement; let f = parseFloat(getComputedStyle(e).fontSize); while ((e.scrollWidth > col.clientWidth + 1 || col.scrollWidth > col.clientWidth + 1) && f > 40) { f -= 2; e.style.fontSize = f + 'px'; } }));
   // проверка: текст не вылезает за рамку
-  const over = await p.evaluate(() => [...document.querySelectorAll('.slide')].filter(s => { const r = s.getBoundingClientRect(); return [...s.querySelectorAll('.col,.stack')].some(e => { const q = e.getBoundingClientRect(); return q.top < r.top + 60 || q.bottom > r.bottom - 100; }); }).map(s => s.id));
+  const over = await p.evaluate(() => [...document.querySelectorAll('.slide')].filter(s => { const r = s.getBoundingClientRect(); return [...s.querySelectorAll('.col,.stack')].some(e => { const q = e.getBoundingClientRect(); return q.top < r.top + 60 || q.bottom > r.bottom - 100 || e.scrollWidth > e.clientWidth + 2 || q.right > r.right - 70; }) || [...s.querySelectorAll('.cardname,h1,h2')].some(e => e.getBoundingClientRect().right > r.right - 70); }).map(s => s.id));
   for (let i = 1; i <= total; i++) await (await p.$('#s' + i)).screenshot({ path: path.join(outDir, i + '.jpg'), type: 'jpeg', quality: 92 });
   await b.close();
   console.log(JSON.stringify({ ok: true, slides: total, overflow: over, out: outDir }));
