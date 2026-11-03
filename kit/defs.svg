@@ -1,0 +1,39 @@
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#140a24"/><stop offset=".55" stop-color="#2c1846"/><stop offset="1" stop-color="#4a2a5e"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a2a63"/><stop offset="1" stop-color="#170c22"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff3d0" stop-opacity=".9"/><stop offset=".35" stop-color="#e8c77a" stop-opacity=".35"/><stop offset="1" stop-color="#e8c77a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6e2a8"/><stop offset=".5" stop-color="#e8c77a"/><stop offset="1" stop-color="#b8923f"/>
+    </linearGradient>
+    <symbol id="star8" viewBox="-50 -50 100 100">
+      <path d="M0-50 L9-13 L35-35 L13-9 L50 0 L13 9 L35 35 L9 13 L0 50 L-9 13 L-35 35 L-13 9 L-50 0 L-13-9 L-35-35 L-9-13Z"/>
+    </symbol>
+    __FACE__
+    <!-- рубашка карты -->
+    <symbol id="back" viewBox="0 0 600 1000">
+      <rect x="6" y="6" width="588" height="988" rx="34" fill="#4c1832" stroke="url(#goldg)" stroke-width="10"/>
+      <rect x="34" y="34" width="532" height="932" rx="20" fill="#6e2346" stroke="#e8c77a" stroke-opacity=".6" stroke-width="3"/>
+      <rect x="62" y="62" width="476" height="876" rx="12" fill="none" stroke="#e8c77a" stroke-opacity=".35" stroke-width="2" stroke-dasharray="2 12" stroke-linecap="round"/>
+      <g fill="none" stroke="#e8c77a">
+        <circle cx="300" cy="500" r="190" stroke-width="3" opacity=".8"/>
+        <circle cx="300" cy="500" r="150" stroke-width="2" opacity=".5"/>
+        <circle cx="300" cy="500" r="226" stroke-width="2" opacity=".35" stroke-dasharray="4 10"/>
+      </g>
+      <use href="#star8" x="200" y="400" width="200" height="200" fill="url(#goldg)"/>
+      <g fill="#e8c77a">
+        <circle cx="300" cy="176" r="22"/><circle cx="312" cy="170" r="20" fill="#6e2346"/>
+        <circle cx="300" cy="824" r="22"/><circle cx="288" cy="818" r="20" fill="#6e2346"/>
+        <use href="#star8" x="96" y="140" width="40" height="40"/><use href="#star8" x="464" y="140" width="40" height="40"/>
+        <use href="#star8" x="96" y="820" width="40" height="40"/><use href="#star8" x="464" y="820" width="40" height="40"/>
+        <use href="#star8" x="116" y="482" width="36" height="36"/><use href="#star8" x="448" y="482" width="36" height="36"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
