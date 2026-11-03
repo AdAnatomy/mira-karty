@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-11-03",
+    "time": "manual",
+    "kind": "month",
+    "card": "wheel",
+    "cardName": "Колесо Фортуны",
+    "title": "Карта месяца: Ноябрь 🎡",
+    "status": "manual"
+  },
+  {
     "date": "2026-11-04",
     "time": "08:30",
     "kind": "day",
