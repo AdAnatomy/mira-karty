@@ -10,14 +10,13 @@
   },
   {
     "date": "2026-11-04",
-    "time": "08:30",
+    "time": "14:30",
     "kind": "day",
     "card": "empress",
     "cardName": "Императрица",
     "title": "Карта дня: Императрица 👑",
-    "metricoolId": 415325350,
+    "metricoolId": 416357360,
     "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7132615&openWithPostUuid=3633625479366593307",
-    "status": "failed",
-    "error": "TikTok отключён в Metricool, пост не вышел"
+    "status": "scheduled"
   }
 ]
