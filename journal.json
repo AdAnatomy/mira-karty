@@ -15,9 +15,9 @@
     "card": "empress",
     "cardName": "Императрица",
     "title": "Карта дня: Императрица 👑",
-    "metricoolId": 416357360,
+    "metricoolId": 416409968,
     "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7132615&openWithPostUuid=3633625479366593307",
     "status": "failed",
-    "error": "Повторная попытка в 14:30 тоже не прошла: Metricool пишет, что TikTok отключён"
+    "error": "Попытки в 14:30 и 15:10 тоже не прошли: Metricool пишет, что TikTok отключён, хотя его переподключили"
   }
 ]
