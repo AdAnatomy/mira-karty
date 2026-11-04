@@ -17,6 +17,7 @@
     "title": "Карта дня: Императрица 👑",
     "metricoolId": 415325350,
     "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7132615&openWithPostUuid=3633625479366593307",
-    "status": "scheduled"
+    "status": "failed",
+    "error": "TikTok отключён в Metricool, пост не вышел"
   }
 ]
