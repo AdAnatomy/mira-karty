@@ -1,12 +1,14 @@
 [
   {
-    "date": "2026-11-03",
-    "time": "manual",
-    "kind": "month",
-    "card": "wheel",
-    "cardName": "Колесо Фортуны",
-    "title": "Карта месяца: Ноябрь 🎡",
-    "status": "manual"
+    "date": "2026-11-05",
+    "time": "08:30",
+    "kind": "day",
+    "card": "star",
+    "cardName": "Звезда",
+    "title": "Карта дня: Звезда ✨",
+    "metricoolId": 417282466,
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7847937&openWithPostUuid=2701405620816399456",
+    "status": "scheduled"
   },
   {
     "date": "2026-11-04",
@@ -19,5 +21,14 @@
     "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7847937&openWithPostUuid=8233229462208857923",
     "status": "published",
     "publicUrl": "https://www.tiktok.com/@snova.taro/video/7704294034977606934"
+  },
+  {
+    "date": "2026-11-03",
+    "time": "manual",
+    "kind": "month",
+    "card": "wheel",
+    "cardName": "Колесо Фортуны",
+    "title": "Карта месяца: Ноябрь 🎡",
+    "status": "manual"
   }
 ]
