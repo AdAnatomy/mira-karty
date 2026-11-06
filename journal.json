@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-11-06",
+    "time": "08:30",
+    "kind": "day",
+    "card": "fool",
+    "cardName": "Шут",
+    "title": "Карта дня: Шут 🃏",
+    "metricoolId": 418485062,
+    "plannerUrl": "https://app.metricool.com/planner/calendar?blogId=7847937&openWithPostUuid=1167525666698118064",
+    "status": "scheduled"
+  },
+  {
     "date": "2026-11-05",
     "time": "08:30",
     "kind": "day",
